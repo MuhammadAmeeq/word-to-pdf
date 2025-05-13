@@ -1,0 +1,14 @@
+{
+  "name": "word-to-pdf",
+  "version": "1.0.0",
+  "description": "A simple Node.js app to convert Word files to PDF using LibreOffice.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "libreoffice-convert": "^1.6.1",
+    "multer": "^1.4.5-lts.2"
+  }
+}
