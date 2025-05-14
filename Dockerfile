@@ -1,9 +1,10 @@
 # Use a slim Node.js base image
 FROM node:18-slim
 
-# Install LibreOffice and clean up extra cache
+# Install LibreOffice and Microsoft fonts
 RUN apt-get update && \
-    apt-get install -y libreoffice && \
+    apt-get install -y libreoffice ttf-mscorefonts-installer fontconfig && \
+    fc-cache -f -v && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
